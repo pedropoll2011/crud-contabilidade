@@ -22,3 +22,6 @@ Route::get('/', function () {
 Route::get('/produto', [ProdutoController::class, 'index'])->name('produtos.index');
 Route::get('/produto/novo', [ProdutoController::class, 'novo'])->name('produtos.novo');
 Route::post('/produto', [ProdutoController::class, 'store'])->name('produtos.store');
+Route::get('/produto/{produto}/editar', [ProdutoController::class, 'editar'])->name('produtos.editar');
+Route::put('/produto/{produto}/update', [ProdutoController::class, 'update'])->name('produtos.update');
+Route::delete('/produto/{produto}/deletar', [ProdutoController::class, 'deletar'])->name('produtos.deletar');
